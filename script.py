@@ -53,8 +53,9 @@ def hello():
     result = loaded_model.predict(X_te)
     print(np.array2string(result, separator=', '))
 
-    return np.array2string(result, separator=', ')
-    #return result
+    #return np.array2string(result, separator=', ')
+    return str(result[0][4])
 
 if (__name__ == "__main__"):
 	app.run(port = 5000)
+
